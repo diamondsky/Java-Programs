@@ -1,0 +1,33 @@
+//Kiana Slimak
+//10.12.17
+import java.util.Scanner;
+public class BonusFunction {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int numItems;
+		float cost;
+		float total;
+		
+		System.out.println("Enter the cost of the item you're requesting.");
+		cost = assignCost(float cost);
+		System.out.println("Enter the quantity you are requesting of that item.");
+		numItems = assignNumItems(int numItems);
+		
+		if (numItems > 10)
+			total = (float) ((float) (cost * numItems) - (0.1 * (cost * numItems)));
+		else 
+			total = (float) (cost * numItems);
+		
+		System.out.printf("Your total is: $ %.2f", total);
+			
+	}//end class
+
+
+public static double assignNumItems(int numItems) {
+	return numItems;
+	}
+public static double assignCost(float cost) {
+	return cost;
+	}
+}
