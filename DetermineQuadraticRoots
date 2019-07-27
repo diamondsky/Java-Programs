@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class DetermineQuadraticRoots {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		float a, b, c;
+		float root1, root2;
+		double discriminant;
+		
+		System.out.println("Enter the values for a, b, and c in order.");
+		a = input.nextFloat();
+		b = input.nextFloat();
+		c = input.nextFloat();
+		
+		discriminant = Math.pow(Math.pow(b, 2) - (4 * a * c), 0.5);
+		
+		if (discriminant > 0) {
+			root1 = (float) (-b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+			root2 = (float) (-b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+			System.out.printf("The equation has two roots %.5f and %.5f", root1, root2);
+		}
+		else if (discriminant == 0) {
+			root1 = (float) (-b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+			System.out.printf("The equation has one root %.5f", root1);
+		}
+		else {
+			System.out.println("The equation has no real roots");
+		}
+	} //end of class
+} //end main
