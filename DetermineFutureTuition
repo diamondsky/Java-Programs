@@ -1,0 +1,20 @@
+public class FutureTuition {
+
+	public static void main(String[] args) {
+		int tuition = 10000;
+		int tuition10yr = 0;
+		int total = 0;
+		int year;
+		
+		for (year = 1; year <= 14; year = year +1) {
+			tuition = (int) (tuition + (tuition * 0.05));
+				if (year == 10)
+					tuition10yr = tuition;
+				if (year > 10)
+					total = (total + tuition);
+		} //end loop
+		System.out.printf("The cost of tuition after 10 years is: %.2d\n", tuition10yr);
+		System.out.printf("The total 4 year tuition after 10 years is: %.2d\n", total);
+
+	}//end class
+}//end main
