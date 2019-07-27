@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class AverageArrays {
+	
+	final static int max = 10;
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		double[] nums = new double[max];
+        System.out.print("Enter ten numbers: ");
+        for (int index = 0; index < nums.length; index++) {
+        	nums[index] = input.nextDouble();
+			}
+        System.out.println("The average is: " + average(nums));
+	}//end class
+
+    public static int average(int[] array) {
+        int total = 0;
+        int avg;
+        for (int index = 0; index < array.length; index++) {
+            total = total + array[index];
+        }//end for
+        avg = total / array.length;
+        return avg;
+    }//end class
+	
+    public static double average(double[] array) {
+        double total = 0;
+        double avg;
+        for (int index = 0; index < array.length; index++) {
+            total = total + array[index];
+        }//end for
+        avg = total / array.length;
+        return avg;
+    }//end class
+}//end main
