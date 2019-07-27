@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class ComputeKineticEnergy {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		float mass;
+		float velocity;
+		float height;
+		float tke;
+		float gpe;
+		float g;
+		
+		System.out.println("Enter the mass, velocity, and height in order.\n");
+		mass = input.nextFloat();
+		velocity = input.nextFloat();
+		height = input.nextFloat();
+		
+		if (mass < 0)
+			System.out.println("Invalid Input\n");
+		else if (velocity < 0)
+			System.out.println("Invalid Input\n");
+		else if (height < 0)
+			System.out.println("Invalid Input\n");
+		
+		System.out.printf("You entered " + mass + " as the mass.\n");
+		System.out.printf("You entered " + velocity + " as the velocity.\n");
+		System.out.printf("You entered " + height + " as the height.\n");
+		
+		g = 9.8f;
+		tke = (float) (0.5 * mass * Math.pow(velocity, 2));
+		gpe = (float) (mass * g * height);
+		
+		System.out.printf("The tke for the mass and velocity is: %7.2f\n", tke);
+		System.out.printf("The gpe for the mass and height is: %7.2f\n", gpe);
+	} //end class
+}//end main
