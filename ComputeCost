@@ -1,0 +1,38 @@
+//Kiana Slimak
+//10.26.17
+import java.util.Scanner;
+public class ComputeCost {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int zone;
+		float cost;
+		
+		System.out.println("Enter the zone:");
+		zone = input.nextInt();
+		
+		cost = calculate(zone);
+		System.out.printf("The cost is: $ %.2f ", cost);
+
+	}//end class
+
+	public static float calculate(int zone) {
+		float cost = 0;
+		
+		if (zone <= 4){
+			cost = (float) (zone * 3.5);
+		}
+		if (zone < 7){
+			cost = (float) (zone * 2.75 + 5.50);
+		}
+		if (zone < 10) {
+			cost = (float) (zone * 5.5 + 45.5);
+		}
+		if (zone >= 10){
+			cost = (float) (zone * 3.75 + (zone - 10)* 7.00);
+		}
+		
+	return cost;
+	}//end class
+}//end main
