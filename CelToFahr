@@ -1,0 +1,17 @@
+//Kiana Slimak
+//10.12.17
+import java.util.Scanner;
+public class CelsiusToFahrenheit {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		double fahrenheit, celsius;
+		
+		System.out.println("Celsius\t\tFahrenheit");
+		System.out.println("_____________________________");
+		for (celsius = 1; celsius <= 30; celsius++) {
+			fahrenheit = celsius * 1.8 + 32;
+			System.out.printf("%.2f\t\t%.2f\n", celsius, fahrenheit);
+		}//end for
+	}//end class
+}//end main
