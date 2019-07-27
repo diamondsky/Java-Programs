@@ -1,0 +1,5 @@
+public class InitializeArray {
+	public static void main(String[] args) {
+		float x[] = {12.5f, 42.0f, 11.5f, 9.4f, 77.8f};
+	}//end class
+}//end main
