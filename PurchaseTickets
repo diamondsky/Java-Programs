@@ -1,0 +1,21 @@
+//Kiana Slimak
+//10.12.17
+import java.util.Scanner;
+public class PurchaseTickets {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int numTickets;
+		int totalTickets = 0;
+		
+		System.out.println("Enter the number of initial tickets you would like.");
+		numTickets = input.nextInt();
+		totalTickets = totalTickets + numTickets;
+		while (numTickets > 0) {
+			System.out.println("Enter the number of extra tickets you would like.");
+			numTickets = input.nextInt();
+			totalTickets = totalTickets + numTickets;
+		} //end while
+		System.out.printf("The total number of tickets requested is: %d", totalTickets);
+	}//end class
+}//end main
