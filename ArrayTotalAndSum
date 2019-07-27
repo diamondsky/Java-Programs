@@ -1,0 +1,17 @@
+public class ArrayTotalAndSum {
+
+	public static void main(String[] args) {
+		double arr1[] = {0.2, 0.5, 0.6, 9.4};
+		double arr2[] = {1.0, 6.0, 0.2, 3.5};
+		computeTotal(arr1, arr2);
+	}//end class
+
+	public static double computeTotal(double a[], double b[]) {
+	    double total = 1;
+	    for (int index = 0; index < a.length; index++) {
+	    	total = (total * (a[index] + b[index]));
+	    	System.out.println("Products of pair sums: \n" + total );
+	    }//end for
+	    return total;
+	    }//end class
+}//end main
