@@ -1,0 +1,28 @@
+public class CelsiusToFahrenheit {
+
+	public static void main(String[] args) {
+		double fahrenheit, celsius;
+		
+		System.out.println("Celsius\t\tFahrenheit");
+		System.out.println("_____________________________");
+		for (celsius = 40; celsius >= 31; celsius--) {
+			System.out.printf("%.2f\t\t%.2f\t\t\n", celsius, CelsiusToFahrenheit(celsius));
+		}//end for
+		
+		System.out.println("\nFahrenheit\tCelsius");
+		System.out.println("______________________________");
+		for (fahrenheit = 120; fahrenheit >= 30;  fahrenheit--) {
+			System.out.printf("%.2f\t\t%.2f\t\t\n", fahrenheit, FahrenheitToCelsius(fahrenheit));
+		}//end for
+		
+	}//end class
+	
+	public static double CelsiusToFahrenheit(double celsius) {
+		return (9.0 / 5) * celsius + 32;
+	}//end method
+
+	public static double FahrenheitToCelsius(double fahrenheit) {
+		return (5.0 / 9) * (fahrenheit - 32);
+	}//end method
+
+}//end main
