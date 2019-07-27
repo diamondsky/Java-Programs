@@ -1,0 +1,83 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.FlowPane;
+import javafx.geometry.Pos;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+
+public class Part2 extends Application {
+	
+	public static void main1(String[] args) {
+
+		Application.launch(args);
+
+	}  // end of main
+
+	public void start(Stage primaryStage) throws Exception {
+		FlowPane pane1 = new FlowPane();
+		FlowPane pane2 = new FlowPane(300,200);
+		pane1.setAlignment(Pos.CENTER);
+		pane2.setAlignment(Pos.CENTER);
+		
+		BorderPane pane = new BorderPane();
+		pane.setTop(pane1);
+		pane.setLeft(pane2);
+		Button btnArea = new Button("Compute Area");
+		Button btnPerimeter = new Button("Computer Perimeter");
+		Button btnClear = new Button("Clear");
+		Label lblMessage = new Label("Output here:");
+		TextField txtInput = new TextField("");
+		txtInput.setPrefColumnCount(20);
+		pane1.getChildren().add(btnArea);
+		ButtonClickHandler handler = new ButtonClickHandler(lblMessage, txtInput, btnArea, btnPerimeter, btnClear);
+		btnArea.setOnAction(handler);
+		pane1.getChildren().add(btnPerimeter);
+		pane1.getChildren().add(btnClear);
+		btnPerimeter.setOnAction(handler);
+		pane2.getChildren().add(txtInput);
+		pane2.getChildren().add(lblMessage);
+        Scene scene = new Scene(pane,300,200);
+        primaryStage.setTitle("Process Data");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+ }  // end of start               
+
+}//end of launch
+
+class ButtonClickHandler implements EventHandler<ActionEvent> {
+	public Label label1;
+	public TextField text1;
+	public Button button1, button2, button3;
+	
+	public ButtonClickHandler(Label lab1, TextField t1, Button b1, Button b2, Button b3) {
+		label1 = lab1;
+		text1 = t1;
+		button1 = b1;
+		button2 = b2;
+		button3 = b3;
+	}//end constructor
+	public void handle(ActionEvent e) {
+		if (e.getSource().equals(button1)) {
+			label1.setText("Area button clicked");
+			double side = Float.parseFloat(text1.getText());
+			double area = side *2;
+			label1.setText("The area is " + area);
+			
+		}
+		else if (e.getSource().equals(button2)) {
+			label1.setText("Primeter button clicked");
+			double side = Float.parseFloat(text1.getText());
+			double perimeter = side + side + side + side;
+			label1.setText("The perimeter is " + perimeter);
+		}
+		else if (e.getSource().equals(button3)) {
+			label1.setText("Clear Button Clicked");
+			text1.setText("");
+		}
+	}//end of handle method
+}//end of ButtonClickedHandler class
