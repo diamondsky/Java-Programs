@@ -1,0 +1,14 @@
+public class KiloConversion {
+
+	public static void main(String[] args) {
+		float kilos;
+		float lbs;
+		
+		System.out.println("Kilograms      Pounds");
+		
+		for (kilos = 1; kilos < 200; kilos = kilos + 1){
+			lbs = (float) 2.2 * kilos;
+			System.out.printf("%.1f            %.1f\n", kilos, lbs);
+		}//end loop
+	}//end class
+}//end main
