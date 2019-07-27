@@ -1,0 +1,23 @@
+public class EstimatePi {
+
+	public static void main(String[] args) {
+		int i;
+		
+		System.out.println("i\t\tCircumstantial PI\n");
+		System.out.println("_________________________________\n");
+		
+		for (i = 1; i <= 901; i = i + 100) {
+			System.out.printf("%d\t\t%.4f\n", i, Calculation(i));
+		}//end for
+	}//end class
+
+	public static double Calculation(double i) {
+		double pi = 0;
+		for (i = i; i > 0; i--) {
+		      pi = pi + Math.pow(-1, i + 1) / (2 * i - 1);
+		      if (i == 1)
+		    	  pi = pi * 4;
+		}//end for
+		return pi;
+	}//end class
+}//end main
