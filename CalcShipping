@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class CalcShipping {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		float weight;
+		
+		System.out.println("Enter the wight of your package in lbs.");
+		weight = input.nextFloat();
+		
+		if (weight > 0 & weight <= 1) {
+			System.out.printf("Your shipping cost will be $3.50");
+		}
+		else if (weight > 1 & weight <= 3) {
+			System.out.printf("Your shipping cost will be $5.50");
+		}
+		else if (weight > 3 & weight <= 10) {
+			System.out.printf("Your shipping cost will be $8.50");
+		}
+		else if (weight > 10 & weight <= 20) {
+			System.out.printf("Your shipping cost will be $10.50");
+		}
+		else {
+			System.out.printf("Your package cannot be shipped.");
+		}
+
+	} //end class
+
+} //end main
