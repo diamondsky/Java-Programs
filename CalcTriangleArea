@@ -1,0 +1,52 @@
+
+import java.util.Scanner;
+import static java.lang.Math.sqrt;
+import static java.lang.Math.abs;
+public class ComputeTriangleArea {
+
+	public static void main(String[] args) {
+		double x1, y1, x2, y2, x3, y3;
+		double s1, s2, s3;
+		double side;
+		double area;
+		Scanner input;
+		
+		input = new Scanner(System.in);
+		System.out.println("Input x1");
+		try {
+			x1 = input.nextDouble();
+			} finally {}
+		System.out.println("Input y1");
+		try {
+			y1 = input.nextDouble();
+			} finally {}
+		System.out.println("Input x2");
+		try {
+			x2 = input.nextDouble();
+			} finally {}
+		System.out.println("Input y2");
+		try {
+			y2 = input.nextDouble();
+			} finally {}
+		System.out.println("Input x3");
+		try {
+			x3 = input.nextDouble();
+			} finally {}
+		System.out.println("Input y3");
+		try {
+			y3 = input.nextDouble();
+			} finally {}
+		
+        s1 = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+        s2 = Math.sqrt(Math.pow((x3 - x2), 2) + Math.pow((y3 - y2), 2));
+        s3 = Math.sqrt(Math.pow((x1 - x3), 2) + Math.pow((y1 - y3), 2));
+        side = (s1 + s2 +s3) / 2;
+        area = Math.sqrt(side * (side - s1) * (side - s2) * (side - s3));
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+		System.out.printf("The area of the triangle is %7.2f\n", area);
+		System.out.println(Math.abs(area));
+		/* format with seven spaces and two places of precision*/
+	}	//end of main
+} 	//end of class
