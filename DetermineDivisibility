@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Divisibility {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int num;
+		
+		System.out.println("Enter an integer.");
+		num = input.nextInt();
+		
+		 System.out.print("Is the number divisible by 5 and 6?");
+		 if((num % 5 == 0) && (num % 6 == 0)) {
+		  System.out.println(" true");
+		 } else {
+		  System.out.println(" false");
+		 }
+		 System.out.print("Is the number divisible by 5 or 6?");
+		 if((num % 5 == 0) || (num % 6 == 0)) {
+		  System.out.println(" true");
+		 } else {
+		  System.out.println(" false");
+		 }
+		 System.out.print("Is the number divisible by 5 or 6, but not both?");
+		        // XOR operator for the third condition
+		 if((num % 5 == 0) ^ (num % 6 == 0)) {
+		  System.out.println(" true");
+		 } else {
+		  System.out.println(" false");
+		 }
+	} //end of class
+} //end of main
