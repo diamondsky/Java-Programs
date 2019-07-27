@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class StdDeviation {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		double[] nums = new double[10];
+		 
+		System.out.println("Enter ten numbers:");
+		  for (int index = 0; index < nums.length; index++) {
+			  nums[index] = input.nextDouble();
+		  } //end for
+		 
+		  System.out.printf("The mean is: %.2f\n", mean(nums));
+		  System.out.printf("The standard deviation is: %.5f", deviation(nums));
+	}//end class
+ 
+	 public static double mean(double[] x) {
+		 double total = 0;
+		 for (int index = 0; index < x.length; index++) {
+			 total = total + x[index];
+		 }//end class
+	 
+		 return total / x.length;
+	 }//end class
+	 
+	 public static double deviation(double[] x) {
+		 double mean = mean(x);
+		 double totSq = 0;
+		 for (int index = 0; index < x.length; index++) {
+			 totSq = totSq + Math.pow((x[index] - mean), 2);
+		 }//end for
+ 
+		 return Math.sqrt(totSq / (x.length - 1));
+ 
+	 }//end class
+}//end main
