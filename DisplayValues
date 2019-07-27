@@ -1,0 +1,13 @@
+//Kiana Slimak
+//10.12.17
+public class DisplayValues {
+
+	public static void main(String[] args) {
+		int display;
+		for (display = 2; display <= 16; display = display +2) {
+			System.out.printf("%d, ", display);
+		}//end for
+		System.out.println("end.");
+	}//end class
+
+}//end main
