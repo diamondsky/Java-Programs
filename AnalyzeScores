@@ -1,0 +1,62 @@
+import java.util.Scanner;
+public class AnalyzeScores {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		final int cap = 100;
+		int scores[] = new int[cap];
+		int num = 0;
+		
+        System.out.println("Enter scores: ");
+        System.out.println("Enter -1 upon completion.");
+        for (int index = 0; index < cap; index++) {
+            scores[index] = input.nextInt();
+            num = index;
+            if (scores[index] < 0) {
+            	break;
+            }//end if
+		}//end for
+        
+        int av = calcAv(scores, num);
+
+        System.out.println("Number of scores: " + num);
+        System.out.println("Average score is: " + av);
+        System.out.printf("\nNumber of scores above average: %d", scorePlacementAbove(scores, av));
+        System.out.printf("\nNumber of scores below average: %d", scorePlacementBelow(scores, av));
+        System.out.printf("\nNumber of scores equal to the average: %d", scorePlacementEqual(scores, av));
+	}//end class
+
+    public static int calcAv(int[] scores, int num) {
+        int total = 0;
+        for (int index = 0; index < num; index++) {
+            total = total + scores[index];
+        }//end for
+        return total / num;
+    }//end class
+
+
+    public static int scorePlacementAbove(int[] scores, int av) {
+        int countAbove = 0;
+        for (int index = 0; scores[index] >= 0; index++) {
+            if (scores[index] >= av) countAbove++;
+        }//end for
+        return countAbove;
+    }//end class		
+    
+    public static int scorePlacementBelow(int[] scores, int av) {
+        int countBelow = 0;
+        for (int index = 0; scores[index] >= 0; index++) {
+            if (scores[index] <= av) countBelow++;
+        }//end for
+        return countBelow;  
+    }//end class
+    
+    public static int scorePlacementEqual(int[] scores, int av) {
+        int countEqual = 0;
+        for (int index = 0; scores[index] >= 0; index++) {
+            if (scores[index] == av) countEqual++;
+        }//end for
+        return countEqual;  
+    }//end class
+}//end main
