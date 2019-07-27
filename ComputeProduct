@@ -1,0 +1,20 @@
+//Kiana Slimak
+//10.12.17
+import java.util.Scanner;
+public class ComputeProduct {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int num = 0;
+		int product = 1;
+		int counter = 0;
+		
+		while (counter < 5) {
+			counter++;
+			System.out.println("Enter an integer.");
+			num = input.nextInt();
+			product = product * num;
+		}//end while
+		System.out.printf("The product of all the integers is: %d", product);
+	}//end class
+}//end main
