@@ -1,0 +1,43 @@
+public class Time {
+	double hour;
+    double minute;
+    double second;
+
+    public Time() {
+        double totalSeconds = System.currentTimeMillis() / 1000;
+        double totalMinutes = totalSeconds / 60;
+        double totalHours = totalMinutes / 60;
+        this.hour = totalHours % 24;
+        this.minute = totalMinutes % 60;
+        this.second = totalSeconds % 60;
+    }
+
+    public Time(double hour, double minute, double second) {
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+    }
+
+    public Time(double elapseTime) {
+        double totalSeconds = elapseTime / 1000;
+        double totalMinutes = totalSeconds / 60;
+        double totalHours = totalMinutes / 60;
+        this.hour = totalHours % 24;
+        this.minute = totalMinutes % 60;
+        this.second = totalSeconds % 60;
+    }
+
+    public double getHour() {
+        return hour;
+    }
+
+    public double getMinute() {
+        return minute;
+    }
+
+
+    public double getSecond() {
+        return second;
+    }
+
+}//end class
