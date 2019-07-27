@@ -1,0 +1,17 @@
+public class MilesToKilometers {
+
+	public static void main(String[] args) {
+		final double kilometersPerMile = 1.609;
+		int kilometers;
+		int miles;
+		
+		System.out.println("Miles      Kilometers   |   Kilometers     Miles   ");
+		
+		for (miles = 1, kilometers = 20; miles <= 10 && kilometers <= 65; miles = miles + 1, kilometers = kilometers + 5){
+			System.out.printf("%-11d%-10.3f", miles, (miles * kilometersPerMile));
+				System.out.print("   |   ");
+				System.out.printf("%-15d%-6.3f\n", kilometers, (kilometers / kilometersPerMile));
+		}//end loop
+	}//end class
+}//end main
+ 
