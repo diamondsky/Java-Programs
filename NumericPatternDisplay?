@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class NumericPatternDisplay {
+
+	private static Scanner input;
+	public static void main(String[] args) {
+		input = new Scanner(System.in);
+
+		System.out.print("Enter how many rows: ");
+		int rows = input.nextInt();
+
+		displayPattern(rows);
+} //end main
+
+
+public static void displayPattern(int n) {
+	for(int nextNum=0; nextNum <= n; nextNum++) {
+	    for(int num=nextNum; num > 0; num--) { 
+	       System.out.print(num + " "); 
+	    }//end for
+		System.out.println(); 
+	}//end for
+	}//end class
+}//end method
