@@ -1,0 +1,44 @@
+import javafx.application.Application;
+//import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+//import javafx.scene.shape.Shape;
+import javafx.stage.Stage;
+
+public class Circles extends Application {
+
+ @Override
+ public void start(Stage primaryStage) {
+  Pane pane = new Pane();
+  
+//  for(int i = 0; i < 4; i++) {
+	  Circle circle1 = new Circle(120, 100, 35, Color.YELLOW);
+	  Circle circle2 = new Circle(220, 100, 35, Color.CYAN);
+	  Circle circle3 = new Circle(120, 100, 35, Color.YELLOW);
+	  Circle circle4 = new Circle(220, 100, 35, Color.CYAN);
+	  Circle circle5 = new Circle(120, 100, 35, Color.YELLOW);
+	  Circle circle6 = new Circle(220, 100, 35, Color.CYAN);
+	  Circle circle7 = new Circle(120, 100, 35, Color.YELLOW);
+	  Circle circle8 = new Circle(220, 100, 35, Color.CYAN);
+	pane.getChildren().add(circle1);
+	pane.getChildren().add(circle2);
+	pane.getChildren().add(circle3);
+	pane.getChildren().add(circle4);
+	pane.getChildren().add(circle5);
+	pane.getChildren().add(circle6);
+	pane.getChildren().add(circle7);
+	pane.getChildren().add(circle8);
+ // }// for
+  
+  Scene scene = new Scene(pane, 800, 200);
+  primaryStage.setTitle("Line of Cirlces");
+  primaryStage.setScene(scene);
+  primaryStage.show();
+ }
+
+ public static void main(String[] args) {
+	 launch(args);
+ }//end launch
+}//end FillGrid
