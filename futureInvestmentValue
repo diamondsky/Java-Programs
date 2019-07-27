@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class HW {
+
+	public static void main(String[] args) {
+		double futureInvestmentValue;
+		double investmentAmount;
+		double monthlyInterestRate;
+		double annualInterestRate;
+		double numYears;
+		Scanner input;
+		
+		input = new Scanner(System.in);
+		System.out.println("Enter the investment amount.");
+		try {
+			investmentAmount = input.nextDouble();
+		} finally {}
+		System.out.println("Enter the annual interest rate.");
+		try {annualInterestRate = input.nextDouble();
+		} finally {}
+		System.out.println("Enter the number of years invested.");
+		try {
+			numYears = input.nextDouble();
+		} finally {}
+		
+		monthlyInterestRate = annualInterestRate / 1200;
+		futureInvestmentValue = (investmentAmount * Math.pow((1 + monthlyInterestRate), (numYears * 12)));
+		System.out.println(futureInvestmentValue);
+		System.out.printf("The future accumulated value is %7.2\n", futureInvestmentValue);
+		}
+	}
