@@ -1,0 +1,22 @@
+public class ComputeCommissions {
+
+	public static void main(String[] args) {
+		double salesAmnt;
+		
+		System.out.println("Sales Amount\t\tCommission\n");
+		System.out.println("___________________________________");
+		
+		for (salesAmnt = 10000; salesAmnt <= 100000; salesAmnt = salesAmnt + 5000) {
+			System.out.printf("%.2f\t\t%.2f\n", salesAmnt, ComputeCommission(salesAmnt));
+		}//end loop
+
+	}//end class
+	
+	public static double ComputeCommission(double salesAmnt) {
+		double commission;
+		commission = (5000 * 0.08) + (5000 * 0.1) + (salesAmnt - 10000) * 0.12;
+
+		return commission;
+	}//end class
+	
+}//end main
