@@ -1,0 +1,9 @@
+public class ArrayPower {
+	public static void main(String[] args) {
+		int power[] = new int[20];
+		for (int index = 0; index < power.length; index++) {
+			power[index] = (int) Math.pow(3, power[index]);
+			System.out.println(power[index]);
+		}//end for
+	}//end class
+}//end main
